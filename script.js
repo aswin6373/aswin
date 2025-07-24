@@ -87,7 +87,7 @@ document.getElementById('downloadResume')?.addEventListener('click', function(e)
     e.preventDefault();
     // You can replace this with actual resume file path
     const link = document.createElement('a');
-    link.href = 'resume.pdf'; // Replace with your resume file path
+    link.href = 'res.pdf'; // Replace with your resume file path
     link.download = 'Aswinrag_K_Resume.pdf';
     link.click();
 });
