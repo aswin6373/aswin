@@ -1697,10 +1697,10 @@ html {
 <div class="contact-content">
     <div class="contact-icon-grid">
         <!-- Email Icon -->
-        <a href="mailto:aswin66373@gmail.com" class="contact-grid-item">
-            <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
-            <span>Email</span>
-        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aswin66373@gmail.com" target="_blank" class="contact-grid-item">
+    <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
+    <span>Email</span>
+</a>
         <!-- Location Icon -->
         <a href="https://www.google.com/maps/search/?api=1&query=KODOOR+HOUSE,+NAITHALLOOR,+ESWARAMANGALAM+PO,+679573,+MALAPPURAM,+Kerala" target="_blank" class="contact-grid-item">
             <div class="icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
@@ -1915,6 +1915,17 @@ html {
         
         aboutObserver.observe(aboutSection);
     }
+
+    // Add this to your existing script tag
+document.querySelector('a[href*="mailto"]')?.addEventListener('click', function(e) {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (!isMobile) {
+        e.preventDefault();
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=aswin66373@gmail.com', '_blank');
+    }
+    // On mobile, let the default mailto: behavior work
+});
 </script>
 
 </body>
